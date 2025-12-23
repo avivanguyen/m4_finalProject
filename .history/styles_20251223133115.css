@@ -276,9 +276,7 @@ legend {
     margin-top: 32px;
 }
 
-.filterContainer {
-    margin: 32px 0;
-}
+
 
 /*
 
@@ -288,7 +286,6 @@ Event Card Panel Styles
 .search-results__panel {
     display: flex;
     flex-direction: column;
-    width: 800px;
 }
 
 .container__event-card {

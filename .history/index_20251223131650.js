@@ -2,8 +2,6 @@
 //Token: QY75O7UM5CSPJ47EE5PM
 // https://www.eventbrite.com/o/120779391691
 
-const EVENTBRITE_API_KEY = 'QY75O7UM5CSPJ47EE5PM'; // Define the API key
-
 // Function to fetch events
 async function fetchEventbriteEvents() {
   try {
@@ -114,58 +112,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Search button click event
-    if (searchButton) {
-        searchButton.addEventListener('click', function(e) {
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        const query = searchInput.value.trim() || 'events';
+        const location = locationInput.value.trim() || 'Denver';
+        fetchEventbriteEvents(query, location);
+    });
+
+    // Enter key press event for search input
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
             e.preventDefault();
             const query = searchInput.value.trim() || 'events';
             const location = locationInput.value.trim() || 'Denver';
             fetchEventbriteEvents(query, location);
-        });
-    }
-
-    // Enter key press event for search input
-    if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const query = searchInput.value.trim() || 'events';
-                const location = locationInput.value.trim() || 'Denver';
-                fetchEventbriteEvents(query, location);
-            }
-        });
-    }
+        }
+    });
 
     // Enter key press event for location input
-    if (locationInput) {
-        locationInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const query = searchInput.value.trim() || 'events';
-                const location = locationInput.value.trim() || 'Denver';
-                fetchEventbriteEvents(query, location);
-            }
-        });
-    }
+    locationInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const query = searchInput.value.trim() || 'events';
+            const location = locationInput.value.trim() || 'Denver';
+            fetchEventbriteEvents(query, location);
+        }
+    });
 
     // Load default events on page load
     fetchEventbriteEvents('events', 'Denver');
 });
+
 
 //dropdown menu
 document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.querySelector('.nav__dropdown');
     const dropdownMenu = document.querySelector('.dropdown__menu');
 
-    if (dropdown && dropdownMenu) {
-        dropdown.addEventListener('click', function(event) {
-            event.preventDefault();
-            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-        });
+    dropdown.addEventListener('click', function(event) {
+        event.preventDefault();
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
 
-        document.addEventListener('click', function(event) {
-            if (!dropdown.contains(event.target)) {
-                dropdownMenu.style.display = 'none';
-            }
-        });
-    }
+    document.addEventListener('click', function(event) {
+        if (!dropdown.contains(event.target)) {
+            dropdownMenu.style.display = 'none';
+        }
+    });
 });

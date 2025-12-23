@@ -2,8 +2,6 @@
 //Token: QY75O7UM5CSPJ47EE5PM
 // https://www.eventbrite.com/o/120779391691
 
-const EVENTBRITE_API_KEY = 'QY75O7UM5CSPJ47EE5PM'; // Define the API key
-
 // Function to fetch events
 async function fetchEventbriteEvents() {
   try {

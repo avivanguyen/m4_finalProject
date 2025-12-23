@@ -230,7 +230,6 @@ Filter Section Styles
 
 .search__content--panel {
     padding-left: 16px;
-    width: 1100px;
 }
 
 .heading__small {
@@ -276,19 +275,15 @@ legend {
     margin-top: 32px;
 }
 
-.filterContainer {
-    margin: 32px 0;
-}
-
 /*
 
 Event Card Panel Styles
 
 */
 .search-results__panel {
+    /* width: 900px; */
     display: flex;
     flex-direction: column;
-    width: 800px;
 }
 
 .container__event-card {

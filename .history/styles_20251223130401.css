@@ -127,7 +127,6 @@ NAVIGATION BAR STYLES
 
 .nav__links--container {
     margin-left: auto;
-    margin-top: 10px;
 }
 .nav__links--container ul{
     display: flex;
@@ -137,7 +136,7 @@ NAVIGATION BAR STYLES
     margin-left: auto;
     gap: 18px;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: ;
 }
 
 .nav__dropdown {
@@ -230,7 +229,6 @@ Filter Section Styles
 
 .search__content--panel {
     padding-left: 16px;
-    width: 1100px;
 }
 
 .heading__small {
@@ -276,19 +274,15 @@ legend {
     margin-top: 32px;
 }
 
-.filterContainer {
-    margin: 32px 0;
-}
-
 /*
 
 Event Card Panel Styles
 
 */
 .search-results__panel {
+    width: 925px;
     display: flex;
     flex-direction: column;
-    width: 800px;
 }
 
 .container__event-card {
