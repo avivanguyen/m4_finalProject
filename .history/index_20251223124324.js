@@ -2,29 +2,29 @@
 //Token: QY75O7UM5CSPJ47EE5PM
 // https://www.eventbrite.com/o/120779391691
 
-const myToken = 'QY75O7UM5CSPJ47EE5PM'; // Replace with your actual token
-const organizerId = '120779391691'; // Replace with your organizer ID
-const apiUrl = `www.eventbriteapi.com{organizerId}&expand=venue`;
+// const myToken = 'QY75O7UM5CSPJ47EE5PM'; // Replace with your actual token
+// const organizerId = '120779391691'; // Replace with your organizer ID
+// const apiUrl = `www.eventbriteapi.com{organizerId}&expand=venue`;
 
-fetch(apiUrl, {
-    headers: {
-        "Authorization": `Bearer ${myToken}`, // The recommended way to send the token
-        "Accept": "application/json"
-    }
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error('Network response was not ok: ' + response.statusText);
-    }
-    return response.json();
-})
-.then(data => {
-    console.log('Events data:', data.events);
-    // Process and display the event data here
-})
-.catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-});
+// fetch(apiUrl, {
+//     headers: {
+//         "Authorization": `Bearer ${myToken}`, // The recommended way to send the token
+//         "Accept": "application/json"
+//     }
+// })
+// .then(response => {
+//     if (!response.ok) {
+//         throw new Error('Network response was not ok: ' + response.statusText);
+//     }
+//     return response.json();
+// })
+// .then(data => {
+//     console.log('Events data:', data.events);
+//     // Process and display the event data here
+// })
+// .catch(error => {
+//     console.error('There has been a problem with your fetch operation:', error);
+// });
 
 const EVENTBRITE_API_KEY = '5FCTN7DTKCLJ3KATWP'; // Replace with your actual API key
 const SEARCH_QUERY = 'denver'; // Example search term
@@ -79,7 +79,10 @@ function displayEvents(events) {
 // Call the fetch function
 fetchEventbriteEvents();
 
-//Search bar
+
+// ...existing code...
+
+//Search bar functionality
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('.search-bar__label input');
     const locationInput = document.querySelector('.search-bar__location input');
@@ -170,6 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load default events on page load
     fetchEventbriteEvents('events', 'Denver');
 });
+
+// ...existing code...
 
 
 //dropdown menu
