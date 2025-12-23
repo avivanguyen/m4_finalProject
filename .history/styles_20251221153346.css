@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a 
+
+li {
+    list-style: none;
+}
+
+/*
+
+NAVIGATION BAR STYLES
+
+*/
+.nav__wrapper {
+    width: 100%;
+    height: 60px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo {
+    padding: 10px 0;
+}
+
+.nav__logo img{
+    background-color: transparent;
+    width: 150px;
+    height: auto;
+    padding-right: 44px;
+}
+
+.nav__search-bar i {
+    margin: 0 auto;
+    color: #767585;
+    font-size: 14px;
+}
+
+.noTextBorder {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 12px;
+}
+
+.nav__search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav__search-bar {
+    width: 355px;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar__label {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dbdae3;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-right: 4px solid #dbdae3;
+}
+
+.search-bar__label i,
+.search-bar__location i.fa-location-dot {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.search-bar__location {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dbdae3;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.fa-magnifying-glass.primary--search {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar__location button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 35px;
+    background-color: #cc3f24;
+    margin-right: 4px;
+}
+
+.nav__links--container ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    gap: 40px;
+    padding-left: 44px;
+}

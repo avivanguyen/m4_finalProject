@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/2588cf0bac.js" crossorigin="anonymous"></script>
+    <script src="maps.googleapis.com" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__wrapper">
+                <div class="nav__logo">
+                    <img src="https://www.eventbrite.com/blog/wp-content/uploads/2025/02/Eventbrite_Hero-Lock-up_Brite-Orange.png" alt="">
+                </div>
+                <div class="nav__search-bar">
+                    <div class="search-bar__label">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search events" class="noTextBorder">
+                    </div>
+                    <div class="search-bar__location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Location" class="noTextBorder">
+                        <button class="search-bar__button">
+                            <i class="fa-solid fa-magnifying-glass primary--search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav__links--container">
+                    <ul class="nav__link--item">
+                        <li><a href="">Contact Sales</a></li>
+                        <li><a href="">Create Events</a></li>
+                        <li class="nav__dropdown">
+                            <a href="" class="nav__link--dropdown">Help Centre <i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="dropdown__menu">
+                                <li><a href="">Help Centre</a></li>
+                                <li><a href="">Find your tickets</a></li>
+                                <li><a href="">Contact your event organizer</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Find tickets</a></li>
+                        <li><a href="">Log In</a></li>
+                        <li><a href="">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="ribbon__container">
+            <p>
+                It an unforgettable event with Eventbrite - <u>click</u> here to find events near you! <span class="party--emoji">🎉</span>
+            </p>
+        </div>
+        <ol class="breadcrumbs">
+            <li>Home</li>
+            <li>United States</li>
+            <li>Denver</li>
+            <li>Denver CO Events</li>
+        </ol>
+        <section class="search__content">
+            <section class="search__content--panel">
+                <h1 class="search__header">
+                        Denver co events in Denver, CO
+                </h1>
+                <div class="content">
+                    <div class="filter__panel">
+                        <p class="heading__small">Filters</p>
+                        <div class="filter__column">
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Category</legend>
+                                    <ul class="filter__category">
+                                        <li><a href="" class="blue"><i class="fa-regular fa-address-card"></i> Business</a></li>
+                                        <li><a href="" class="blue"><i class="fa-solid fa-utensils"></i> Food & Drink</a></li>
+                                        <li><a href="" class="blue"><i class="fa-solid fa-stethoscope"></i> Health</a></li>
+                                        <li><a href="" class="blue"><i class="fa-solid fa-music"></i> Music</a></li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Date</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="radio" id="today" name="date" value="today">
+                                            <label for="today"> Today</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="tomorrow" name="date" value="tomorrow">
+                                            <label for="tomorrow"> Tomorrow</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="this-weekend" name="date" value="this-weekend">
+                                            <label for="this-weekend"> This weekend</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="pick-date" name="date" value="pick-date">
+                                            <label for="pick-date"> Pick a date...</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Neighborhood</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="checkbox" name="neighborhood" id="five-points" value="five-points">
+                                            <label for="five-points">Five Points</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="neighborhood" id="applewood" value="applewood">
+                                            <label for="applewood">Applewood</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="neighborhood" id="castlewood" value="castlewood">
+                                            <label for="castlewood">Castlewood</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="neighborhood" id="civic-center" value="civic-center">
+                                            <label for="civic-center">Civic Center</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Price</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="radio" name="price" id="free" value="free">
+                                            <label for="free">Free</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="price" id="paid" value="paid">
+                                            <label for="paid">Paid</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Format</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="radio" name="format" id="class" value="class">
+                                            <label>Class</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>Conference</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>Festival</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>Party</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterContainer">
+                                <ul>
+                                    <li>
+                                        <input type="radio">
+                                        <label>Only show events from organizers I follow</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio">
+                                        <label>Search for online events</label>
+                                    </li>
+                                </ul>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Language</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="checkbox">
+                                            <label>English</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <label>German</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <label>Spanish</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox">
+                                            <label>French</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>             
+                            <div class="filterSection">
+                                <div class="choice__list">
+                                    <legend>Currency</legend>
+                                    <ul class="filter__category">
+                                        <li>
+                                            <input type="radio">
+                                            <label>U.S. Dollar</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>Canadian Dollar</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>Euro</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio">
+                                            <label>British Pound</label>
+                                        </li>                                  
+                                    </ul>
+                                </div>
+                                <div class="view-more">
+                                    <button class="view-more__button">View More</button>
+                                </div>
+                            </div>
+                        </div>             
+                    </div>
+                    <div class="search-results__panel">
+                        <ul>
+                            <li>
+                                <div class="container__event-card">
+                                    <img src="https://imageevents.org.uk/wp-content/uploads/2016/02/event-management-placeholder.jpg" class="event-card__image">
+                                    <div class="event__details">
+                                        <div class="event__tag-status">Almost full</div>
+                                        <h3 class="event__title">Event title</h3>
+                                        <p class="event__date">Wed 7 Jan, 7:00 PM</p>
+                                        <p class="event__location">Denver, Denver Marriott Tech Center</p>
+                                        <div class="event__price">From $50.00</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="map">
+                <img src="./assets/CO map.png" alt="">
+            </section>
+        </section>
+    </main>
+    
+</body>
+
+</html>

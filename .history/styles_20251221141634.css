@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+
+NAVIGATION BAR STYLES
+
+*/
+.nav__wrapper {
+    width: 1200px;
+    height: 60px;
+}
+
+.nav__logo img{
+    background-color: transparent;
+    width: 110px;
+    height: auto;
+    padding: 4px 0;
+}
