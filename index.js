@@ -140,37 +140,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Search button click event
-    searchButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        const query = searchInput.value.trim() || 'events';
-        const location = locationInput.value.trim() || 'Denver';
-        fetchEventbriteEvents(query, location);
-    });
+    if (searchButton) {
+        searchButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const query = searchInput.value.trim() || 'events';
+            const location = locationInput.value.trim() || 'Denver';
+            fetchEventbriteEvents(query, location);
+        });
+    }
 
     // Enter key press event for search input
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            const query = searchInput.value.trim() || 'events';
-            const location = locationInput.value.trim() || 'Denver';
-            fetchEventbriteEvents(query, location);
-        }
-    });
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const query = searchInput.value.trim() || 'events';
+                const location = locationInput.value.trim() || 'Denver';
+                fetchEventbriteEvents(query, location);
+            }
+        });
+    }
 
     // Enter key press event for location input
-    locationInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            const query = searchInput.value.trim() || 'events';
-            const location = locationInput.value.trim() || 'Denver';
-            fetchEventbriteEvents(query, location);
-        }
-    });
+    if (locationInput) {
+        locationInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const query = searchInput.value.trim() || 'events';
+                const location = locationInput.value.trim() || 'Denver';
+                fetchEventbriteEvents(query, location);
+            }
+        });
+    }
 
     // Load default events on page load
     fetchEventbriteEvents('events', 'Denver');
 });
-
 
 //dropdown menu
 document.addEventListener('DOMContentLoaded', function() {
