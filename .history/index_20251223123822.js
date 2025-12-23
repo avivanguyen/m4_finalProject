@@ -26,7 +26,7 @@
 //     console.error('There has been a problem with your fetch operation:', error);
 // });
 
-const EVENTBRITE_API_KEY = '5FCTN7DTKCLJ3KATWP'; // Replace with your actual API key
+const EVENTBRITE_API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key
 const SEARCH_QUERY = 'denver'; // Example search term
 const API_URL = `www.eventbriteapi.com{SEARCH_QUERY}&token=${EVENTBRITE_API_KEY}`;
 
